@@ -1,9 +1,4 @@
-/*
-* @Author: MAIBENBEN
-* @Date:   2018-08-27 09:00:39
-* @Last Modified by:   MAIBENBEN
-* @Last Modified time: 2018-08-30 13:16:16
-*/
+
 *{
 	padding: 0;
 	margin: 0;
@@ -22,8 +17,8 @@ body{
 	height:63px;
 	line-height:63px;
 	position:fixed;
-	top:0px;
-	left:0px;
+	top:0;
+	left:0;
 	z-index:9;
 	background: url('../img/bg_head.png')
 	repeat-x;
@@ -33,6 +28,7 @@ body{
     text-align: left;
     width: 935px;
     height: 48px;
+	padding: 0;
 }
 .header .container .nav{
 	width: 484px;
@@ -44,43 +40,100 @@ body{
 	float: right;
 }
 
-.header .container .head_1{
+.header .container .head_1 {
 	float: left;
 	width: 182px;
 	height: 38px;
 	background-image: url('../img/logo.png');
-	/* background-position: 0% -38px; */
 	margin-top: 10px;
+	position: relative;
 }
-.header .container .nav .head_2{
+.header .container span {
+	width: 182px;
+	height: 38px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('../img/logo.png');
+	background-position: 0% -38px;
+	opacity: 0;
+}
+.header .container .nav a span{
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/nav.png');
+}
+
+.header .container .nav .head_2 {
 	width: 44px;
 	height: 100%;
 	background-image: url('../img/nav.png');
-	background-position: -1px -0px;
+	background-position: -1px -41px;
 	margin-right: 40px;
+	position: relative;
 }
-.header .container .nav .head_3{
+.header .container .nav .head_2 span{
+	background-position: -1px -41px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.header .container .nav .head_3 {
 	width: 42px;
 	background-image: url('../img/nav.png');
-	background-position: -93px -41px;
+	background-position: -93px 0;
 	margin-right: 40px;
+	position: relative;
 }
-.header .container .nav .head_4{
+.header .container .nav .head_3 span{
+	background-position: -93px -41px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.header .container .nav .head_4 {
 	width: 85px;
 	background-image: url('../img/nav.png');
 	background-position: -177px 0;
 	margin-right: 40px;
+	position: relative;
 }
-.header .container .nav .head_5{
+.header .container .nav .head_4 span{
+	background-position: -177px -41px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.header .container .nav .head_5 {
 	width: 80px;
 	background-image: url('../img/nav.png');
 	background-position: -303px 0;
 	margin-right: 40px;
+	position: relative;
 }
-.header .container .nav .head_6{
+.header .container .nav .head_5 span{
+	background-position: -303px -41px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.header .container .nav .head_6 {
 	width: 68px;
 	background-image: url('../img/nav.png');
 	background-position: -427px 0;
+	position: relative;
+}
+.header .container .nav .head_6 span {
+	background-position: -427px -41px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
 }
 .header .container .small{
 	font-size: 30px;
@@ -291,7 +344,7 @@ main .case li .case_x:hover .second{
 footer{
     background: url('../img/out_line.png') center center repeat-x;
     height: 92px;
-    margin: 28px 0px 28px 0px;
+    margin: 28px 0 28px 0;
 }
 footer .move{
 	width: 600px;
@@ -300,36 +353,99 @@ footer .move{
     flex-direction: row;
     justify-content: space-between;
 }
-footer .move .foot_1{
+footer .move .foot_1 {
 	width: 92px;
 	height: 92px;
 	background-image: url('../img/out_btn.png');
 	background-position: 0 0;
+	position: relative;
 }
-footer .move .foot_2{
+footer .move .foot_1 span{
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/out_btn.png');
+	background-position: 0 -93px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+footer .move .foot_2 {
 	width: 92px;
 	height: 92px;
 	background-image: url('../img/out_btn.png');
 	background-position: -125px 0;
+	position: relative;
 }
-footer .move .foot_3{
+footer .move .foot_2 span{
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/out_btn.png');
+	background-position: -125px -93px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+footer .move .foot_3 {
 	width: 92px;
 	height: 92px;
 	background-image: url('../img/out_btn.png');
 	background-position: -251px 0;
+	position: relative;
 }
-footer .move .foot_4{
+footer .move .foot_3 span{
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/out_btn.png');
+	background-position: -251px -93px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+
+}
+
+footer .move .foot_4 {
 	width: 92px;
 	height: 92px;
 	background-image: url('../img/out_btn.png');
 	background-position: -378px 0;
+	position: relative;
 }
-footer .move .foot_5{
+footer .move .foot_4 span{
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/out_btn.png');
+	background-position: -378px -93px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+
+}
+
+footer .move .foot_5 {
 	width: 92px;
 	height: 92px;
 	background-image: url('../img/out_btn.png');
 	background-position: -502px 0;
+	position: relative;
 }
+footer .move .foot_5 span{
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/out_btn.png');
+	background-position: -502px -93px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+
+}
+
 .over{
 	color: rgb(146,146,146);
 	font-size: 12px;
@@ -347,6 +463,7 @@ footer .move .foot_5{
     left: 0px;
     z-index: 9;
     background: url('../img/bg_foot.png') center top no-repeat;
+	display: none;
 }
 @media screen and (max-width:1200px){
 
