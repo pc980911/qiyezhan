@@ -1,5 +1,5 @@
 let foot = document.querySelector(".foot");
-window.onscroll = function () {
+window.onscroll=function () {
     let bh = document.body.scrollTop || document.documentElement.scrollTop;
     if (bh > 500) {
         animate(foot, {opacity: 1}, 200);
@@ -8,10 +8,8 @@ window.onscroll = function () {
     }
 };
 
-//移入效果\
+//移入效果
 $(function () {
-
-
     let btn1 = $(".head_1");
     btn1.mouseenter(function () {
         $(".head_1>span").animate({opacity: "1"}, 500)
@@ -55,49 +53,53 @@ $(function () {
         $(".head_6>span").animate({opacity: "0"}, 500)
     });
 
-
     $(".foot_1").mouseenter(function () {
         $(".foot_1>span").animate({opacity: "1"}, 500)
-    });
+    })
     $(".foot_1").mouseleave(function () {
         $(".foot_1>span").animate({opacity: "0"}, 500)
-    });
+    })
     $(".foot_2").mouseenter(function () {
         $(".foot_2>span").animate({opacity: "1"}, 500)
     })
     $(".foot_2").mouseleave(function () {
         $(".foot_2>span").animate({opacity: "0"}, 500)
-    });
+    })
     $(".foot_3").mouseenter(function () {
         $(".foot_3>span").animate({opacity: "1"}, 500)
     })
     $(".foot_3").mouseleave(function () {
         $(".foot_3>span").animate({opacity: "0"}, 500)
-    });
+    })
     $(".foot_4").mouseenter(function () {
         $(".foot_4>span").animate({opacity: "1"}, 500)
-    });
+    })
     $(".foot_4").mouseleave(function () {
         $(".foot_4>span").animate({opacity: "0"}, 500)
-    });
+    })
     $(".foot_5").mouseenter(function () {
         $(".foot_5>span").animate({opacity: "1"}, 500)
-    });
+    })
     $(".foot_5").mouseleave(function () {
         $(".foot_5>span").animate({opacity: "0"}, 500)
     })
 
 
-    let btn = $(".case_btn a");
-    console.log(btn);
-    btn.mouseenter(function () {
-        let i = $(this).index();
-        (btn.eq(i).children()).animate({opacity: "1"}, 100);
-        (btn.eq(i).children()).animate({ height: "96px"}, 500);
+
+    $(".xu").mouseenter(function () {
+        $(".xu>span").animate({opacity:"1"},500)
     });
-    btn.mouseleave(function () {
-        let i=$(this).index();
-        (btn.eq(i).children()).animate({opacity:"0"},100);
-        (btn.eq(i).children()).animate({height:"65px"},500);
+    $(".xu").mouseleave(function () {
+        $(".xu>span").animate({opacity:"0"},500)
     })
+
+    $(".bth1").mouseenter(function () {
+        $(".bth1>span").animate({opacity:"1"},500)
+    });
+    $(".bth1").mouseleave(function () {
+        $(".bth1>span").animate({opacity:"0"},500)
+    })
+
 });
+
+
